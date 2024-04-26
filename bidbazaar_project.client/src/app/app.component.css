@@ -1,0 +1,23 @@
+﻿:host {
+    max-width: 1280px;
+    text-align: center;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+table {
+    margin: 0 auto;
+}
+
+/* styles.css (або styles.scss) */
+
+.app-root {
+  margin: 0;
+  padding: 0;
+}
+.container_body{
+  display: flex;
+}

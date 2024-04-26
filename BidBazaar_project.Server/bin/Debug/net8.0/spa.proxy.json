@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:4200",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\olegs\\Desktop\\BidBazaar_project\\BidBazaar_project.Server\\..\\bidbazaar_project.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
