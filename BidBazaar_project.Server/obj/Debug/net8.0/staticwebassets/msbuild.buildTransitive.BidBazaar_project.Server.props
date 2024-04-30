@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\BidBazaar_project.Server.props" />
-</Project>
