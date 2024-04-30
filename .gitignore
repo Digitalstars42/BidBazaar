@@ -1,2 +1,14 @@
 #visual_studio
 .vs
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+!AgileCraft/WebsiteSLN/Website/[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
