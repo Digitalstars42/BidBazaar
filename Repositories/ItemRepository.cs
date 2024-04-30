@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.ComponentModel;
+using System.Data.SqlClient;
 using Dapper;
 using Microsoft.Data.SqlClient;
 
@@ -7,16 +8,31 @@ namespace Repositories
     
     public interface IItemRepository
     {
-        public Items Create(Items item);
+        public void Create(Items item);
         public IEnumerable<Items> Get();
         public IEnumerable<Items> GetById(int Id);
 
     }
     public class ItemRepository : BaseRepository, IItemRepository
     {
-        public Items Create(Items item)
+        public void Create(Items item)
         {
-            throw new NotSupportedException();
+            // 1. We will create a connection
+            using (var connection = new SqlConnection(GetConnectionString()))
+            {
+                // 2. We will create an `INSERT` sql statement
+                var sql = "INSERT INTO Items(name, description, price, availability_status) VALUES (@Name, @Description,@Price, @AvailibilityStatus)";
+                // 3. Call the `Execute` method
+                var inserteditem = new
+                {
+                    Name = item.Name,
+                    Description = item.Description,
+                    Price = item.Price,
+                    AvailibilityStatus = item.AvailibilityStatus
+                };
+                    var rowsAffected = connection.Execute(sql, inserteditem);
+                    Console.WriteLine($"{rowsAffected} row(s) inserted.");
+            }
         }
         public IEnumerable<Items> Get()
         {
@@ -48,10 +64,6 @@ namespace Repositories
         }
         public IEnumerable<Items> GetById(int Id) { throw new NotSupportedException(); }
 
-        Items IItemRepository.Create(Items item)
-        {
-            throw new NotImplementedException();
-        }
         IEnumerable<Items> IItemRepository.GetById(int Id)
         {
             throw new NotImplementedException();

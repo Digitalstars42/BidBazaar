@@ -27,5 +27,19 @@ namespace BidBazaar_project.Server.Controllers
             var connection = _configuration.GetConnectionString("myconnection");
             return _itemsService.Get();
         }
+        [HttpPost(Name = "Items")]
+        public ActionResult Create([FromBody] Items body)
+        {
+            try
+            {
+                var connection = _configuration.GetConnectionString("myconnection");
+                _itemsService.Create(body);
+                return Ok();
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
