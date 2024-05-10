@@ -1,0 +1,23 @@
+.headlines{
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+.categories{
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+  justify-content: center;
+}
+.category{
+  width: 150px;
+  padding: 0 0 15px 0;
+  font-weight: bold;
+  margin: 0 20px;
+  cursor: pointer; /* Зміна курсору при наведенні */
+}
+.icon{
+  height: 150px;
+  width: 150px;
+  border: #330372 solid 2px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

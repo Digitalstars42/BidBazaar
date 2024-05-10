@@ -1,0 +1,35 @@
+.container_top{
+  height: 65px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  background-color: #330372;
+}
+.Title{
+  color: #FFFFFF;
+  margin: 25px;
+  cursor: pointer;
+}
+.top-right{
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  margin-left: auto;
+}
+.Button{
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  align-items: center;
+  text-align: right;
+  margin: 0 10px;
+  padding: 4px 10px;
+  border: 1px solid #060606;
+  font-weight: bold;
+  line-height: 28px;
+  color: #060606;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #C6B0ED; /* Зміна кольору фону кнопки при наведенні */
+}

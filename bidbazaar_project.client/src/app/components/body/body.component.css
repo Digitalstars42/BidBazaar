@@ -1,0 +1,65 @@
+.search_filter {
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center; /* Центруємо елементи по горизонталі */
+  margin: 30px;
+}
+
+.search-container input[type="text"],
+.search-container button {
+  padding: 10px; /* Розміри кнопки та поля вводу */
+  font-size: 16px; /* Розмір шрифту */
+}
+
+.search-container input[type="text"] {
+  width: 80%; /* Ширина поля вводу */
+  height: 45px;
+  border: 2px solid #330372; /* Межа поля вводу */
+  border-radius: 10px; /* Скругленість кутиків */
+}
+
+.search-container button {
+  background-color: #330372; /* Колір фону кнопки */
+  color: white; /* Колір тексту кнопки */
+  border: none; /* Видаляємо межу */
+  border-radius: 10px; /* Скругленість кутиків */
+  margin-left: 20px; /* Простір між полем вводу та кнопкою */
+  cursor: pointer; /* Зміна курсору при наведенні */
+  height: 45px;
+}
+
+.search-container button:hover {
+  background-color: #6944AC; /* Зміна кольору фону кнопки при наведенні */
+}
+.button{
+  display: flex;
+}
+
+.filter-buttons{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  justify-content: center;
+}
+.filter-button{
+  height: 40px;
+  width: 90px;
+  background-color: #330372; /* Колір фону кнопки */
+  color: white; /* Колір тексту кнопки */
+  border: none; /* Видаляємо межу */
+  border-radius: 10px; /* Скругленість кутиків */
+  cursor: pointer; /* Зміна курсору при наведенні */
+  font-size: 16px;
+  margin: 0 30px;
+}
+.filter-button:hover {
+  background-color: #6944AC; /* Зміна кольору фону кнопки при наведенні */
+}
+
+

@@ -1,0 +1,94 @@
+.start{
+  width: 100%;
+  flex: 1;
+}
+.headlines{
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.file-input-container {
+  justify-content: center;
+  flex: 1;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  border: #060606 2px solid;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.file-input-container input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input-container:hover {
+  background-color: #C6B0ED;
+}
+
+.icon{
+  height: 300px;
+  width: 500px;
+}
+.form-control {
+  height: 47px;
+  width: 100%; /* Розтягуємо поле на всю доступну ширину */
+  padding: 10px; /* Додаємо внутрішній відступ */
+  border: 2px solid #060606; /* Додаємо рамку */
+  border-radius: 10px; /* Округлюємо кути */
+  font-size: 16px; /* Розмір тексту */
+  box-sizing: border-box; /* Враховуємо ширину рамки у загальній ширині елементу */
+  margin-bottom: 20px;
+}
+
+/* Стилі для фокусу поля вводу тексту */
+.form-control:focus {
+  outline: none; /* Прибираємо синю рамку при фокусі */
+  border-color: #330372; /* Змінюємо колір рамки при фокусі */
+}
+.title{
+  text-align: left;
+  font-size: 18px;
+  margin-left: 12px;
+}
+.container_line{
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+}
+select{
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  border: #060606 2px solid;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #060606;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.radio-button{
+  margin-right: auto ;
+}
+
+.radio-button label{
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 40px;
+}
+
+

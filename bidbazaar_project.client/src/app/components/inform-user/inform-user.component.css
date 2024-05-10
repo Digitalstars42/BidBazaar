@@ -1,0 +1,7 @@
+.headlines{
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+}

@@ -1,0 +1,38 @@
+﻿:host {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+table {
+    margin: 0 auto;
+}
+
+/* styles.css (або styles.scss) */
+
+.app-root {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+.container_body{
+  display: flex;
+  flex: 1;
+}
+
+.container_body .page-content {
+  width: calc(100vw - 50px)
+}
+
+.abc{
+  justify-content: center;
+  align-items: stretch;
+  flex: 1; /* Займати всю доступну ширину */
+}
+
+

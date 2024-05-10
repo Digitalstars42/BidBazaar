@@ -1,0 +1,51 @@
+<div class="start">
+  <h4 class="headlines">Хочете виставити оголошення?</h4>
+  <h3 class="headlines">Погнали!</h3>
+</div>
+
+<div class="file-input-container">
+  <img class="icon" src="/assets/image/Додати%20фото.png" alt="додати фото">
+  <input type="file" (change)="onFileSelected($event)" accept="image/*">
+</div>
+<h3 class="headlines">Добав...</h3>
+<div class="container_line">
+  <span class="title">назву товару:</span>
+  <input class="form-control" name="title" placeholder="Введіть назву товару" [(ngModel)]="name">
+  <span class="title">категорію товару:</span>
+  <select id="Categories" >
+    <option value="1">Все для дому</option>
+    <option value="2">Нерухомість</option>
+    <option value="3">Одяг та взуття</option>
+    <option value="4">Дитячі товари</option>
+    <option value="5">Світ тварин</option>
+    <option value="6">Телефони та комп'ютери</option>
+    <option value="7">Побутова техніка</option>
+    <option value="8">Авто та велосипеди</option>
+    <option value="9">Аксесуари</option>
+    <option value="10">Хобі та дозвілля</option>
+    <option value="11">Туризм та активний відпочинок</option>
+    <option value="12">Інше</option>
+  </select>
+  <span class="title">характеристику товару:</span>
+  <textarea rows="5" cols="50" placeholder="Введіть текст тут"></textarea>
+  <div class="radio-button">
+    <span class="title">вид повідомлення:</span>
+    <label>
+      <input type="radio" name="option" value="selling" [(ngModel)]="selectedOption">
+      Продаж
+    </label>
+    <label>
+      <input type="radio" name="option" value="exchange" [(ngModel)]="selectedOption">
+      Обмін
+    </label>
+    <label>
+      <input type="radio" name="option" value="auction" [(ngModel)]="selectedOption">
+      Аукціон
+    </label>
+  </div>
+</div>
+<app-inform-user></app-inform-user>
+
+
+
+
