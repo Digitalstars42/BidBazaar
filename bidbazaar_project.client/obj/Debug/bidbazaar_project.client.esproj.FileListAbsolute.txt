@@ -1,2 +1,0 @@
-D:\project\BidBazaar_project\bidbazaar_project.client\obj\Debug\bidbazaar_project.client.esproj.CoreCompileInputs.cache
-C:\Users\olegs\Desktop\BidBazaar_project\bidbazaar_project.client\obj\Debug\bidbazaar_project.client.esproj.CoreCompileInputs.cache
