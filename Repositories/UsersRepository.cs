@@ -13,9 +13,21 @@ namespace Repositories
     }
     public class UserRepository : BaseRepository, IUserRepository
     {
-        public Users Create(Users user)
+        public void Create(Users user)
         {
-            throw new NotSupportedException();
+            using (var connection = new SqlConnection(GetConnectionString()))
+            {
+                var sql = "INSERT INTO Users(first_name, last_name, email, password) VALUES (@FirstName, @LastName, @Email, @Password)";
+                var inserteduser = new
+                {
+                    FirstName = user.FirstName, 
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    Password = user.Password
+                };
+                var rowsAffected = connection.Execute(sql, inserteduser);
+                Console.WriteLine($"{rowsAffected} row(s) inserted.");
+            }
         }
         public IEnumerable<Users> Get()
         {
@@ -33,8 +45,8 @@ namespace Repositories
                             var user = new Users
                             {
                                 Id = reader.GetInt32(reader.GetOrdinal("user_id")),
-                                Firstname = reader.GetString(reader.GetOrdinal("first_name")),
-                                Lastname = reader.GetString(reader.GetOrdinal("last_name")),
+                                FirstName = reader.GetString(reader.GetOrdinal("first_name")),
+                                LastName = reader.GetString(reader.GetOrdinal("last_name")),
                                 Email = reader.GetString(reader.GetOrdinal("email")),
                                 Password = reader.GetString(reader.GetOrdinal("password"))
                             };

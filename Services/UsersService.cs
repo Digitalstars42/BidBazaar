@@ -13,6 +13,9 @@ namespace Services
         {
             return _repository.Get();
         }
-
+        public void Create(Users user)
+        {
+            _repository.Create(user);
+        }
     }
 }

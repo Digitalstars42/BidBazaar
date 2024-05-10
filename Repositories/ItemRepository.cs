@@ -17,12 +17,9 @@ namespace Repositories
     {
         public void Create(Items item)
         {
-            // 1. We will create a connection
             using (var connection = new SqlConnection(GetConnectionString()))
             {
-                // 2. We will create an `INSERT` sql statement
-                var sql = "INSERT INTO Items(name, description, price, availability_status) VALUES (@Name, @Description,@Price, @AvailibilityStatus)";
-                // 3. Call the `Execute` method
+                var sql = "INSERT INTO Items(name, description, price, availability_status) VALUES (@Name, @Description, @Price, @AvailibilityStatus)";
                 var inserteditem = new
                 {
                     Name = item.Name,
