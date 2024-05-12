@@ -6,7 +6,7 @@ namespace Repositories
 {
     public interface IUserRepository
     {
-        public Users Create(Users user);
+        public void Create(Users user);
         public IEnumerable<Users> Get();
         public IEnumerable<Users> GetById(int Id);
 
@@ -59,10 +59,6 @@ namespace Repositories
         }
         public IEnumerable<Users> GetById(int Id) { throw new NotSupportedException(); }
 
-        Users IUserRepository.Create(Users User)
-        {
-            throw new NotImplementedException();
-        }
         IEnumerable<Users> IUserRepository.GetById(int Id)
         {
             throw new NotImplementedException();
