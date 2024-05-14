@@ -8,7 +8,7 @@ namespace Repositories
 {
     public class Bids
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public int User_id { get; set; }
         public int Item_id { get; set; }
         public decimal Amount { get; set; }

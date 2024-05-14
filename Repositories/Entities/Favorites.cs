@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Repositories
 {
-    public class Categories
+    public class Favorites
     {
         public int? Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-
+        public int User_id { get; set; }
+        public int Item_id { get; set; }
     }
 }
